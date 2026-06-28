@@ -7,6 +7,9 @@ in / unplug a LAN cable.
 Built with **.NET 9 + WPF**, with a translucent **glassmorphism** UI (acrylic blur,
 graphite palette).
 
+[![Latest release](https://img.shields.io/github/v/release/mahdi-kh1/NetSwitch?label=download&color=2ea043)](https://github.com/mahdi-kh1/NetSwitch/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078d6)](https://github.com/mahdi-kh1/NetSwitch/releases/latest)
+
 > Developed by **mikhodaee@gmail.com**
 
 ---
@@ -28,11 +31,22 @@ graphite palette).
   requests it via UAC on launch.
 - To build from source: [.NET 9 SDK](https://dotnet.microsoft.com/download)
 
-## Download & run
+## Download
 
-Grab the standalone exe from `dist/` (e.g. `NetSwitch-v0.1.2.exe`) and run it.
-It is **self-contained** — no .NET installation required. Approve the UAC prompt and
-the NetSwitch icon appears in the hidden-icons (system tray) area.
+Get the standalone `NetSwitch.exe` from the **Releases** page — it is
+**self-contained** (no .NET installation required).
+
+| | |
+|---|---|
+| ⬇️ **Latest release** | **https://github.com/mahdi-kh1/NetSwitch/releases/latest** |
+| 📦 Direct link (v0.1.2) | https://github.com/mahdi-kh1/NetSwitch/releases/download/v0.1.2/NetSwitch-v0.1.2.exe |
+
+Run it and approve the UAC prompt; the NetSwitch icon appears in the hidden-icons
+(system tray) area.
+
+> The self-contained exe is ~160 MB because it bundles the .NET runtime. If you already
+> have the [.NET 9 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/9.0)
+> installed, a much smaller framework-dependent build can be produced instead.
 
 ## Usage
 
