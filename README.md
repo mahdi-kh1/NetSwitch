@@ -79,6 +79,22 @@ A bash build script (`build.sh`) handles versioning and output:
 Every build goes to its own `dist/v<version>/` folder, so a running (elevated) instance
 never locks the output — you don't have to close the app between builds.
 
+### Releasing
+
+`release.sh` does the whole release in one shot — builds the exe, commits the version
+bump, tags, pushes, and publishes a **GitHub Release** with the exe attached:
+
+```bash
+./release.sh             # bump patch, build, tag, push, publish the release
+./release.sh --no-bump   # release the current version
+./release.sh --notes "…" # custom release notes
+./release.sh --draft     # publish as a draft
+```
+
+The GitHub Release step uses the [`gh` CLI](https://cli.github.com) if it's installed
+and authenticated, otherwise a `GITHUB_TOKEN` environment variable (API), otherwise it
+prints the manual web steps (the tag and exe are still prepared for you).
+
 Or with the SDK directly:
 
 ```bash
